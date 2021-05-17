@@ -588,6 +588,7 @@ namespace SimpleVideoCutter
                 OutputFilePath = outputFilePath,
                 InputFileName = fileInfo.Name,
                 SelectionStart = selectionStart,
+                SelectionEnd = selectionEnd,
                 Duration = selectionEnd - selectionStart,
                 TaskId = Guid.NewGuid().ToString(),
                 Profile = profile,

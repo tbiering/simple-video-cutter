@@ -106,7 +106,7 @@ namespace SimpleVideoCutter
                             currentTask.InputFilePath, 
                             currentTask.OutputFilePath, 
                             TimeSpan.FromMilliseconds(currentTask.SelectionStart), 
-                            TimeSpan.FromMilliseconds(currentTask.Duration),
+                            TimeSpan.FromMilliseconds(currentTask.SelectionEnd),
                             currentTask.Profile.Arguments);
 
                         currentTask.State = FFmpegTaskState.InProgress;
@@ -140,6 +140,7 @@ namespace SimpleVideoCutter
         public string OutputFilePath { get; set; }
         public string InputFileName { get; set; }
         public long SelectionStart { get; set; }
+        public long SelectionEnd { get; set; }
         public long Duration { get; set; }
         public FFmpegCutProfile Profile { get; set; }
         public FFmpegTaskState State { get; set; }
